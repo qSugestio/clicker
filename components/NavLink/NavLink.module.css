@@ -1,0 +1,14 @@
+.tablinks {
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  transition: 0.1s;
+}
+
+.tablinks:hover {
+  border: 5px solid #7c7afe;
+}
+
+.tablinks:active {
+  background-color: #7c7afe;
+}
