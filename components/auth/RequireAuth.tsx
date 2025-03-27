@@ -10,6 +10,7 @@ import { User, getAuth, onAuthStateChanged } from 'firebase/auth'
 import { child, get, ref } from 'firebase/database'
 import { useRouter } from 'next/navigation'
 import { PropsWithChildren, useEffect, useState } from 'react'
+import Login from './Login'
 
 export const RequireAuth = ({ children }: PropsWithChildren) => {
   const [isUser, setIsUser] = useState<any>()
@@ -54,5 +55,5 @@ export const RequireAuth = ({ children }: PropsWithChildren) => {
     )
   }, [isUser])
 
-  return isUser ? <>{children}</> : <></>
+  return isUser ? <>{children}</> : <Login />
 }
